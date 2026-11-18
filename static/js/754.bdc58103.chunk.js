@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkfrontend||=[]).push([[754],{754(e,t,l){l.r(t);l(43);var n=l(362),r=l(579);const a=e=>{let{children:t}=e;return localStorage.getItem("token")?t:(0,r.jsx)(n.C5,{to:"/admin-login",replace:!0})};l.d(t,["default",0,a])}}]);
+//# sourceMappingURL=754.bdc58103.chunk.js.map
