@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
+const API_BASE_URL = 'https://lab-backend-xyz.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -12,6 +12,11 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     console.log(`API Request: ${config.method.toUpperCase()} ${config.url}`);
+
+    const token = localStorage.getItem('token'); 
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => {
