@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkfrontend||=[]).push([[754],{754(e,t,a){a.r(t);a(43);var r=a(362),l=a(579);const n=e=>{let{children:t}=e;const a=localStorage.getItem("adminToken"),n=JSON.parse(localStorage.getItem("adminUser")||"{}");return a&&n.role?t:(0,l.jsx)(r.C5,{to:"/admin-login",replace:!0})};a.d(t,["default",0,n])}}]);
+//# sourceMappingURL=754.9da65f2d.chunk.js.map
