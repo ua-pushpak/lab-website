@@ -18,8 +18,8 @@ const Login = () => {
     try {
       const response = await apiService.login({ email, password });
       if (response.data.success) {
-        localStorage.setItem('adminToken', response.data.data.token);
-        localStorage.setItem('adminUser', JSON.stringify(response.data.data.user));
+        localStorage.setItem('token', response.data.data.token);
+        localStorage.setItem('user', JSON.stringify(response.data.data.user));
         navigate('/admin');
       }
     } catch (error) {

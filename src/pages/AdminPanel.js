@@ -932,6 +932,11 @@ const AdminPanel = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.clear(); // Removes the token
+    window.location.href = '/lab-website/#/admin-login'; // Redirects to login
+  };
+
   const tabs = ['dashboard', 'analytics', 'projects', 'publications', 'authors', 'team', 'news', 'site-settings', 'backups', 'database', 'system', 'users'];
 
   return (
@@ -949,6 +954,8 @@ const AdminPanel = () => {
             <i className={`fas ${theme === 'dark' ? 'fa-sun' : 'fa-moon'} mr-2`}></i>
             {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
           </button>
+
+
           
           <button
             onClick={toggleLanguage}
@@ -957,7 +964,16 @@ const AdminPanel = () => {
             <i className="fas fa-language mr-2"></i>
             {language === 'en' ? 'HI' : 'EN'}
           </button>
+
+
+          <button 
+            onClick={handleLogout}
+            className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all">
+            <i className="fas fa-sign-out-alt mr-2"></i> Logout
+          </button>
         </div>
+
+
 
         {message && (
           <div className="mb-6 p-4 bg-green-500/20 border border-green-500/40 rounded-lg text-green-400">
