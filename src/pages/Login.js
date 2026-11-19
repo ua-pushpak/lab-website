@@ -20,7 +20,8 @@ const Login = () => {
       if (response.data.success) {
         localStorage.setItem('token', response.data.data.token);
         localStorage.setItem('user', JSON.stringify(response.data.data.user));
-        navigate('/admin');
+        window.location.href = '/lab-website/#/admin';
+
       }
     } catch (error) {
       setError(error.response?.data?.message || 'Login failed. Please try again.');
